@@ -1,4 +1,4 @@
-# Class Notes — Sociology (Optional) Paper 1
+# Class Notes — Polity & Governance (GS Paper 2)
 
 A one-time template you compile locally with `pdflatex`. Every new lecture becomes
 one chapter file; you never regenerate the whole book from scratch.
@@ -9,7 +9,7 @@ one chapter file; you never regenerate the whole book from scratch.
 main.tex               — the book: title page, table of contents, \include list
 preamble.tex            — all styling (fonts, colours, note boxes, tables, header/footer)
 chapters/
-  01-values-ethics-human-interface.tex   — sample chapter, already wired into main.tex
+  01-supreme-court-child-welfare-fundamental-rights-bail.tex   — sample chapter, already wired into main.tex
 chapter-prompt.md        — the short prompt: paste a transcript in, get a chapter file out
 README.md                — this file
 ```
@@ -54,22 +54,21 @@ the next compile. You should never need to touch a chapter file to change how it
 
 Two things worth knowing in `preamble.tex`:
 - `\HeaderLeftText` near the bottom — the static left-hand running header text (currently
-  "UPSC Sociology (Optional) • Paper 1"). Edit the string there if you start a book for
+  "UPSC Polity & Governance"). Edit the string there if you start a book for
   a different paper.
-- The `note` environment and its aliases (`KeyConcept`, `DataFact`, `TheoristView`,
-  `CriticalAnalysis`, `CaseStudy`, `ComparisonBox`, `DebateBox`, `IndianContext`,
-  `PYQLink`, `QuickRevision`) — these are what the chapter prompt's output uses. Don't
-  rename them without also updating `chapter-prompt.md`, or new chapters will reference
-  environments that don't exist.
+- The `note` environment and its aliases (`KeyConcept`, `DataFact`, `GovtPolicy`,
+  `CriticalPoint`, `ExampleBox`, `ComparisonBox`, `PYQLink`, `QuickRevision`) — these are
+  what the chapter prompt's output uses. Don't rename them without also updating
+  `chapter-prompt.md`, or new chapters will reference environments that don't exist.
 
 ## Editing the book-level details in `main.tex`
 
 Near the top of `main.tex`:
 ```latex
 \newcommand{\BookExamEyebrow}{CIVIL SERVICES EXAMINATION}
-\newcommand{\BookExamLine}{UPSC \textbullet\ SOCIOLOGY (OPTIONAL) --- PAPER 2}
-\newcommand{\BookTitle}{Sociology --- Paper 2}
-\newcommand{\BookSubtitle}{Indian Society}
+\newcommand{\BookExamLine}{UPSC \textbullet\ GENERAL STUDIES --- PAPER 2}
+\newcommand{\BookTitle}{Polity and Governance}
+\newcommand{\BookSubtitle}{Constitution, Fundamental Rights and the Supreme Court}
 \newcommand{\BookDate}{2026}
 ```
 Edit these for the title page. One book = one subject/paper; start a fresh copy of the
