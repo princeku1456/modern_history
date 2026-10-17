@@ -114,7 +114,7 @@ If `CHAPTER_TITLE` is blank, infer it from the transcript and state your inferen
 | Draws a fine distinction, flags exam importance, or offers a critical evaluation | `CriticalPoint` |
 | Gives a real-world example, case study, or analogy | `ExampleBox` |
 | Compares 2+ items on 1–2 attributes (e.g. section 69A vs 79(3)(b)) | `ComparisonBox` |
-| Compares 2+ items on 3+ attributes | Plain `tabularx` comparison table (booktabs rules, `Y` columns, no colour fill — matches the template) |
+| Compares 2+ items on 3+ attributes | Plain `tabularx` comparison table (booktabs rules, `Y` columns, `\rowcolor{AccentDark}` on the header row — matches the template) |
 | Mentions a past-year question or exam framing | `PYQLink` |
 | Ends a `\section` | `QuickRevision` (mandatory) |
 | Explains a process, chain, or sequence of stages | `enumerate`, one stage per `\item` |

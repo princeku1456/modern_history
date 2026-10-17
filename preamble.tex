@@ -1,6 +1,6 @@
 % ============================================================
 %  preamble.tex — shared styling for all chapters
-%  Class Notes Template — Indigo & Saffron design
+%  Class Notes Template — Navy & Gold design
 %  Do not edit per-chapter. Edit once here; every chapter inherits it.
 % ============================================================
 
@@ -15,16 +15,16 @@
 \usepackage[a4paper,top=2.4cm,bottom=2.4cm,inner=2.8cm,outer=2.0cm,
             headsep=0.7cm,footskip=1cm,headheight=21pt]{geometry}
 
-% ---------- Indigo & Saffron palette ----------
+% ---------- Navy & Gold palette ----------
 \usepackage{xcolor}
-\definecolor{Ink}{HTML}{1E1E2C}          % Deep Charcoal — body text
-\definecolor{Accent}{HTML}{3B3486}       % Royal Indigo — headings, primary accent
-\definecolor{AccentWarm}{HTML}{D4882B}   % Saffron — note borders, labels, highlights
-\definecolor{AccentDark}{HTML}{2C2866}   % Deeper Indigo — table headers
-\definecolor{Grey}{HTML}{6B6E7B}         % Slate — metadata, page numbers
-\definecolor{Hairline}{HTML}{C9C6DE}     % Lavender Mist — rules, dividers
-\definecolor{Tint}{HTML}{FBF8F2}         % Ivory Cream — note background
-\definecolor{SaffronLight}{HTML}{F5E6C8} % Light saffron — subtle accents
+\definecolor{Ink}{HTML}{1E2530}          % Navy Charcoal — body text
+\definecolor{Accent}{HTML}{1F3A5F}       % Deep Navy — headings, primary accent
+\definecolor{AccentWarm}{HTML}{C39A2E}   % Gold — note borders, labels, highlights
+\definecolor{AccentDark}{HTML}{152A47}   % Deeper Navy — table headers
+\definecolor{Grey}{HTML}{66707D}         % Slate — metadata, page numbers
+\definecolor{Hairline}{HTML}{C3CBD8}     % Light Navy Mist — rules, dividers
+\definecolor{Tint}{HTML}{F8F7F4}         % Warm Cream — note background
+\definecolor{GoldLight}{HTML}{EBE0C2}    % Light gold — subtle accents
 \color{Ink}
 
 \usepackage{setspace}
@@ -35,9 +35,9 @@
 \usepackage{needspace}
 
 % ---------- Headings ----------
-% \chapter   = one lecture / topic  (Royal Indigo + saffron underline)
-% \section   = sub-topic            (Ink, bold, indigo number)
-% \subsection= sub-sub-topic        (Indigo, bold italic)
+% \chapter   = one lecture / topic  (Deep Navy + gold underline)
+% \section   = sub-topic            (Ink, bold, navy number)
+% \subsection= sub-sub-topic        (Navy, bold italic)
 % \paragraph = run-in named label
 \usepackage{titlesec}
 \titleformat{\chapter}[display]
@@ -57,7 +57,7 @@
 \setcounter{secnumdepth}{2}
 \setcounter{tocdepth}{2}
 
-% ---------- Table of contents: indigo accents ----------
+% ---------- Table of contents: navy accents ----------
 \usepackage{tocloft}
 \renewcommand{\cftchapfont}{\sffamily\bfseries\color{Accent}}
 \renewcommand{\cftchappagefont}{\sffamily\color{Grey}}
@@ -76,7 +76,7 @@
                     parsep=0pt,label={\textcolor{Grey}{\textendash}}}
 \setlist[enumerate,1]{leftmargin=18pt,labelsep=6pt,topsep=3pt,itemsep=3pt,parsep=0pt}
 
-% ---------- ONE unified note style — saffron border, ivory background ----------
+% ---------- ONE unified note style — gold border, cream background ----------
 \usepackage[most]{tcolorbox}
 \tcbuselibrary{breakable}
 \newtcolorbox{note}[1]{
@@ -98,7 +98,7 @@
 \newenvironment{QuickRevision}{\begin{note}{}\notelabel{QUICK REVISION}}{\end{note}}
 \newenvironment{ChapterGlossaryNote}{\begin{note}{}\notelabel{CHAPTER GLOSSARY}}{\end{note}}
 
-% ---------- Tables: indigo header row, saffron midrule accent ----------
+% ---------- Tables: navy header row, gold midrule accent ----------
 \usepackage{tabularx,array,booktabs,colortbl}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \renewcommand{\arraystretch}{1.35}
