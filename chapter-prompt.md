@@ -17,8 +17,8 @@
 
 | Parameter | Value |
 |---|---|
-| `CHAPTER_TITLE` | e.g. Fundamental Rights |
-| `CHAPTER_LABEL` | short slug for `\label{ch:...}`, e.g. `fundamental-rights` |
+| `CHAPTER_TITLE` | e.g. Revolt of 1857: Causes, Outbreak and Repercussions |
+| `CHAPTER_LABEL` | short slug for `\label{ch:...}`, e.g. `revolt-of-1857` |
 | `TRANSCRIPT_COUNT` | e.g. 2 |
 | `LANGUAGE_OF_OUTPUT` | English (default) / Hindi |
 
@@ -107,19 +107,19 @@ If `CHAPTER_TITLE` is blank, infer it from the transcript and state your inferen
 
 | When the teacher… | Use |
 |---|---|
-| Defines a term or explains a core constitutional/legal idea | `KeyConcept` |
-| States a number, statistic, rank, date, index position, census data | `DataFact` |
-| Names a scheme, act, article, committee, report, judgment, or institution | `GovtPolicy` |
-| Names one specific provision or judgment worth setting off | `\paragraph{Label.}` run-in, then normal text |
-| Draws a fine distinction, flags exam importance, or offers a critical evaluation | `CriticalPoint` |
-| Gives a real-world example, case study, or analogy | `ExampleBox` |
-| Compares 2+ items on 1–2 attributes (e.g. section 69A vs 79(3)(b)) | `ComparisonBox` |
-| Compares 2+ items on 3+ attributes | Plain `tabularx` comparison table (booktabs rules, `Y` columns, `\rowcolor{AccentDark}` on the header row — matches the template) |
-| Mentions a past-year question or exam framing | `PYQLink` |
+| Explains a core concept, ideology, or historical theory | `KeyConcept` |
+| States a date, year, casualty figure, revenue statistic, treaty term | `DataFact` |
+| Names an Act, regulation, charter, treaty, proclamation, or institution | `GovtPolicy` |
+| Names one specific provision, leader, or event worth setting off | `\paragraph{Label.}` run-in, then normal text |
+| Draws a fine distinction, flags historiographical debate, or offers critical evaluation | `CriticalPoint` |
+| Gives a specific historical case study, anecdote, or rebellion example | `ExampleBox` |
+| Compares 2+ items on 1–2 attributes (e.g. Plassey vs. Buxar, Moderates vs. Extremists) | `ComparisonBox` |
+| Compares 2+ items on 3+ attributes | Plain `tabularx` comparison table (booktabs rules, `Y` columns, `\rowcolor{AccentDark}` on header row) |
+| Mentions a past-year question (PYQ) or exam framing | `PYQLink` |
 | Ends a `\section` | `QuickRevision` (mandatory) |
-| Explains a process, chain, or sequence of stages | `enumerate`, one stage per `\item` |
-| Gives challenges then solutions | two `\subsection`s: "Challenges" and "Way Forward" |
-| Says "write this down" / gives a keyword | `\textbf{keyword}` inline **and** add it to the Chapter Glossary |
+| Explains a chronological sequence or phases of a movement | `enumerate`, one phase per `\item` |
+| Gives causes then consequences / impacts | two `\subsection`s: "Causes" and "Consequences / Historical Impact" |
+| Mentions a historical keyword / term of art (e.g. \textit{dastak}, \textit{diwani}) | `\textbf{keyword}` inline **and** add it to the Chapter Glossary |
 
 **Density:** target 20–25% of the chapter as boxed notes — most content stays plain prose and bullets. Never place two note boxes back to back with no text between them; never wrap a whole `\section` in a single box. A note holding one fact reads as plain prose inside the box, not a forced one-item bullet list.
 

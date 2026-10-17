@@ -11,23 +11,22 @@
 %  \includeonly{...} below lets you compile ONLY the chapters you
 %  list there while you're drafting — much faster than rebuilding
 %  the whole book every time. Comment it out (or list every
-%  chapter) for the final full compile, since \includeonly leaves
-%  gaps in the PDF for any chapter you leave out.
+%  chapter) for the final full compile.
 % ============================================================
 
 \documentclass[11pt,a4paper,twoside,openright]{book}
 \input{preamble}
 
-% ---- EDIT THESE for your book ----
+% ---- Book Details: UPSC GS Paper 1 Modern History ----
 \newcommand{\BookExamEyebrow}{CIVIL SERVICES EXAMINATION}
-\newcommand{\BookExamLine}{UPSC \textbullet\ GENERAL STUDIES --- PAPER 2}
-\newcommand{\BookTitle}{International Relations and Polity \& Governance (Lecture 1 to 38)}
-\newcommand{\BookSubtitle}{Governance, Institutions, Health and India's Foreign Relations}
+\newcommand{\BookExamLine}{UPSC \textbullet\ GENERAL STUDIES --- PAPER 1}
+\newcommand{\BookTitle}{Modern Indian History}
+\newcommand{\BookSubtitle}{From the Advent of Europeans to Freedom Struggle \& Independence}
 \newcommand{\BookDate}{2026}
-% -----------------------------------
+% -----------------------------------------------------
 
 % ---- Uncomment and edit to compile only specific chapters while drafting ----
-% \includeonly{chapters/01-supreme-court-child-welfare-fundamental-rights-bail}
+% \includeonly{chapters/01-advent-of-europeans-and-british-expansion}
 
 \begin{document}
 \pagenumbering{gobble}
@@ -60,45 +59,26 @@
 \clearpage
 
 % ================= CHAPTERS =================
-% One \include per lecture, in serial order (auto-generated from the DOCX content).
-\include{chapters/01-ir-policies-of-developed-world}
-\include{chapters/02-ir-various-diplomacies}
-\include{chapters/03-ir-south-asian-diplomacy-neighbourhood-first}
-\include{chapters/04-polity-sc-child-welfare-abortion-bail}
-\include{chapters/05-polity-bail-abortion-anti-defection}
-\include{chapters/06-gs2-current-affairs-session-1}
-\include{chapters/07-gs2-current-affairs-session-2}
-\include{chapters/08-gs2-current-affairs-session-3}
-\include{chapters/09-malnutrition-part-1}
-\include{chapters/10-malnutrition-part-2}
-\include{chapters/11-malnutrition-part-3}
-\include{chapters/12-obesity-part-1}
-\include{chapters/13-obesity-part-2}
-\include{chapters/14-ir-framework-diaspora}
-\include{chapters/15-diaspora-part-2}
-\include{chapters/16-diaspora-part-4}
-\include{chapters/17-diaspora-part-3}
-\include{chapters/18-sco}
-\include{chapters/19-sco-part-2}
-\include{chapters/20-sco-part-3}
-\include{chapters/21-central-asian-republics}
-\include{chapters/22-india-nepal-relation}
-\include{chapters/23-india-nepal-relation-part-2}
-\include{chapters/24-india-afghanistan-relation}
-\include{chapters/25-indo-afghanistan-part-2}
-\include{chapters/26-nhrc}
-\include{chapters/28-cars-part-2}
-\include{chapters/29-nhrc-part-2}
-\include{chapters/30-nhrc-part-3}
-\include{chapters/31-various-commissions}
-\include{chapters/32-health}
-\include{chapters/33-health-part-2}
-\include{chapters/34-various-commissions-part-2}
-\include{chapters/35-health-part-3}
-\include{chapters/36-health-part-4}
-\include{chapters/37-regulatory-bodies}
-\include{chapters/38-indo-bangladesh-relations}
-\include{chapters/99-answer-writing-toolkit}
+% Active Chapters:
+\include{chapters/01-advent-of-europeans-and-british-expansion}
 
+% Roadmap of Future Chapters (Uncomment as files are added):
+% \include{chapters/02-expansion-and-consolidation-of-british-power}
+% \include{chapters/03-early-resistance-and-revolt-of-1857}
+% \include{chapters/04-socio-religious-reform-movements}
+% \include{chapters/05-growth-of-modern-nationalism-and-early-congress}
+% \include{chapters/06-swadeshi-movement-and-rise-of-militant-nationalism}
+% \include{chapters/07-home-rule-league-and-gandhian-emergence}
+% \include{chapters/08-non-cooperation-and-khilafat-movement}
+% \include{chapters/09-swarajists-revolutionary-activities-simon-commission}
+% \include{chapters/10-civil-disobedience-movement-and-round-table-conferences}
+% \include{chapters/11-government-of-india-act-1935-and-provincial-ministries}
+% \include{chapters/12-quit-india-movement-ina-and-post-war-upsurge}
+% \include{chapters/13-communalism-partition-and-independence-1947}
+% \include{chapters/14-british-economic-land-revenue-and-commercial-policies}
+% \include{chapters/15-development-of-press-education-and-civil-services}
+% \include{chapters/16-peasant-tribal-and-working-class-movements}
+% \include{chapters/17-governors-general-viceroys-and-constitutional-acts}
+% \include{chapters/99-answer-writing-toolkit}
 
 \end{document}

@@ -1,93 +1,46 @@
-# Class Notes — Polity & Governance (GS Paper 2)
+# Class Notes — Modern Indian History (GS Paper 1)
 
-A one-time template you compile locally with `pdflatex`. Every new lecture becomes
-one chapter file; you never regenerate the whole book from scratch.
+A modular, publication-quality LaTeX book template for **UPSC Civil Services Examination — General Studies Paper 1 (Modern Indian History)**.
 
-## Folder contents
+Compiled locally with `pdflatex`. Every lecture or topic becomes a self-contained chapter file in `chapters/`; you never need to rewrite the overall book skeleton.
 
-```
-main.tex               — the book: title page, table of contents, \include list
-preamble.tex            — all styling (fonts, colours, note boxes, tables, header/footer)
+## Folder Structure
+
+```text
+main.tex               — The master book: title page, table of contents, and \include chapter list
+preamble.tex           — Styling (Navy & Gold palette, note boxes, typography, tables, headers/footers)
 chapters/
-  01-supreme-court-child-welfare-fundamental-rights-bail.tex   — sample chapter, already wired into main.tex
-chapter-prompt.md        — the short prompt: paste a transcript in, get a chapter file out
-README.md                — this file
+  01-advent-of-europeans-and-british-expansion.tex — Chapter 1: Advent of Europeans & British Conquest of Bengal
+chapter-prompt.md      — Prompt for transforming transcripts or notes into structured LaTeX chapters
+README.md              — Documentation and instructions
 ```
 
-## One-time local setup
+## Compilation
 
-You need a TeX distribution: [TeX Live](https://tug.org/texlive/) (Windows/Linux) or
-[MacTeX](https://tug.org/mactex/) (Mac). Any recent install has every package this
-template uses (`tcolorbox`, `titlesec`, `tocloft`, `fancyhdr`, `tabularx`, `charter` —
-all standard).
+You need a TeX distribution: [TeX Live](https://tug.org/texlive/) (Windows/Linux) or [MacTeX](https://tug.org/mactex/) (Mac) or [MiKTeX](https://miktex.org/).
+
+Run `pdflatex` twice (the second pass builds the table of contents and page references):
 
 ```bash
-cd class-notes-template
 pdflatex main.tex
-pdflatex main.tex        # run twice — the second pass fixes the TOC page numbers
+pdflatex main.tex
 ```
 
-`main.pdf` is your book.
+The output book will be generated as `main.pdf`.
 
-## Adding a new chapter (the normal workflow)
+## Adding a New Chapter
 
-1. Open a chat with the **chapter prompt** (`chapter-prompt.md`) and paste your transcript
-   at the bottom of it, same as before.
-2. You get back **one chapter file** — starting at `\chapter{...}`, nothing else. No
-   preamble, no packages, no title page. Save it as `chapters/02-your-topic.tex`
-   (increment the number).
-3. In `main.tex`, add one line where you want it to appear in the book:
+1. Open a chat with the **chapter prompt** (`chapter-prompt.md`) and paste your lecture transcript or study notes.
+2. The prompt outputs **one LaTeX fragment** starting with `\chapter{...}` and ending with the chapter glossary.
+3. Save it as `chapters/NN-short-slug.tex` (e.g., `chapters/02-expansion-and-consolidation.tex`).
+4. In `main.tex`, add or uncomment the corresponding line:
    ```latex
-   \include{chapters/02-your-topic}
+   \include{chapters/02-expansion-and-consolidation}
    ```
-4. Recompile locally (`pdflatex main.tex`, twice).
+5. Recompile with `pdflatex main.tex` (twice).
 
-That's the whole loop. The assistant only ever produces the chapter body — a few hundred
-lines instead of a full ~250-line preamble plus a sandboxed compile-and-render cycle every
-single time, which is what made earlier runs slow.
+## Customisation
 
-## Editing the design once, for every chapter
-
-Everything visual — colours, note-box style, table style, fonts, header/footer — lives in
-`preamble.tex` alone. Change it once there and every chapter (old and new) picks it up on
-the next compile. You should never need to touch a chapter file to change how it looks.
-
-Two things worth knowing in `preamble.tex`:
-- `\HeaderLeftText` near the bottom — the static left-hand running header text (currently
-  "UPSC Polity & Governance"). Edit the string there if you start a book for
-  a different paper.
-- The `note` environment and its aliases (`KeyConcept`, `DataFact`, `GovtPolicy`,
-  `CriticalPoint`, `ExampleBox`, `ComparisonBox`, `PYQLink`, `QuickRevision`) — these are
-  what the chapter prompt's output uses. Don't rename them without also updating
-  `chapter-prompt.md`, or new chapters will reference environments that don't exist.
-
-## Editing the book-level details in `main.tex`
-
-Near the top of `main.tex`:
-```latex
-\newcommand{\BookExamEyebrow}{CIVIL SERVICES EXAMINATION}
-\newcommand{\BookExamLine}{UPSC \textbullet\ GENERAL STUDIES --- PAPER 2}
-\newcommand{\BookTitle}{Polity and Governance}
-\newcommand{\BookSubtitle}{Constitution, Fundamental Rights and the Supreme Court}
-\newcommand{\BookDate}{2026}
-```
-Edit these for the title page. One book = one subject/paper; start a fresh copy of the
-whole template folder for a different paper.
-
-## Faster iteration while drafting: `\includeonly`
-
-If you're only working on one chapter and don't want to wait for the whole book to
-recompile, uncomment and edit this line near the top of `main.tex`:
-```latex
-\includeonly{chapters/02-your-topic}
-```
-Only that chapter's content is inserted (everything else is skipped, leaving gaps), which
-compiles much faster. **Comment it back out** — or list every chapter — before your final
-full compile, or you'll ship a PDF with chapters missing.
-
-## Chapter numbering vs. file numbering
-
-The `NN-` prefix on a chapter filename (`01-`, `02-`, …) is just for your own sorting in
-the folder — LaTeX numbers chapters by the order of the `\include` lines in `main.tex`,
-not by filename. If you reorder chapters, reorder the `\include` lines; renaming the files
-is optional tidiness.
+- **Running headers & styling**: Defined centrally in `preamble.tex`.
+- **Book metadata**: Defined at the top of `main.tex` (`\BookExamLine`, `\BookTitle`, `\BookSubtitle`, `\BookDate`).
+- **Drafting speed**: Uncomment `\includeonly{chapters/NN-topic}` in `main.tex` to compile only the active chapter while writing.
